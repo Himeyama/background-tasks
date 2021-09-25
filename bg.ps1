@@ -4,7 +4,7 @@ if($Args.Length -ne 1){
 }
 
 [System.Diagnostics.Process]$process = Start-Process `
-    -FilePath notepad `
+    -FilePath $Args[0] `
     -WindowStyle Hidden `
     -PassThru
 $process.GetType()
